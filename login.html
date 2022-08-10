@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/layout.css'%}">
+    <title></title>
+  </head>
+  <body>
+ <div id="main">
+<h2>Login Window</h2>
+<form action="#" method="post">
+  {% csrf_token %}
+  <label for="username">Username</label>
+  <input type="text" name="username">
+  <label for="password">Password</label>
+  <input type="password" name="password">
+  <input type="submit" value="sign-in">
+</form>
+<p>{{error}}</p>
+ </div>
+  </body>
+</html>
