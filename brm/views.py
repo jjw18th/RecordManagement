@@ -10,6 +10,10 @@ def NewBook(request):
     form=NewBookForm()
     res=render(request,'brm/new_book.html',{'form':form})
     return res
+def index(request):
+     res=render(request,'brm/index.html')
+     return res
+
 @login_required(login_url='http://localhost:8000/brm/login/')
 def addBook(request):
     msg=""
